@@ -10,7 +10,7 @@ import signal
 is_windows = False
 
 try:
-    import gnureadline  
+    import readline  
 except: 
     is_windows = True
     import pyreadline
@@ -102,8 +102,8 @@ if is_windows:
     pyreadline.Readline().parse_and_bind("tab: complete")
     pyreadline.Readline().set_completer(completer)
 else:
-    gnureadline.parse_and_bind("tab: complete")
-    gnureadline.set_completer(completer)
+    readline.parse_and_bind("tab: complete")
+    readline.set_completer(completer)
 
 parser = argparse.ArgumentParser(description='Osintgram is a OSINT tool on Instagram. It offers an interactive shell '
                                              'to perform analysis on Instagram account of any users by its nickname ')
@@ -158,8 +158,8 @@ if is_windows:
     pyreadline.Readline().parse_and_bind("tab: complete")
     pyreadline.Readline().set_completer(completer)
 else:
-    gnureadline.parse_and_bind("tab: complete")
-    gnureadline.set_completer(completer)
+    rreadline.parse_and_bind("tab: complete")
+    readline.set_completer(completer)
 
 if not args.command:
     printlogo()
@@ -175,8 +175,8 @@ while True:
             pyreadline.Readline().parse_and_bind("tab: complete")
             pyreadline.Readline().set_completer(completer)
         else:
-            gnureadline.parse_and_bind("tab: complete")
-            gnureadline.set_completer(completer)
+            readline.parse_and_bind("tab: complete")
+            readline.set_completer(completer)
         pc.printout("Run a command: ", pc.YELLOW)
         cmd = input()
 
